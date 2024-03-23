@@ -4,27 +4,28 @@
 
 SetIterator::SetIterator(const Set& m) : set(m)
 {
-	//TODO - Implementation
+	current = set.e; // pointer to first element in the dynamic array
 }
 
 
 void SetIterator::first() {
-	//TODO - Implementation
+	current = set.e; // pointer to first element in the dynamic array
 }
 
 
 void SetIterator::next() {
-	//TODO - Implementation
+	current++;
 }
 
 
-TElem SetIterator::getCurrent()
-{
-	//TODO - Implementation
-	return NULL_TELEM;
+TElem SetIterator::getCurrent() {
+	return *current;
 }
 
 bool SetIterator::valid() const {
-	//TODO - Implementation
-	return false;
+	return current - set.e < set.n;
+}
+
+void SetIterator::setCurrent(TElem value) {
+	*current = value;
 }

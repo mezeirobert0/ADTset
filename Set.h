@@ -3,7 +3,7 @@
 
 //DO NOT CHANGE THIS PART
 #define NULL_TELEM -111111
-typedef int TElem;
+typedef int TElem; //Generic data type - here it is int
 class SetIterator;
 
 class Set {
@@ -11,10 +11,23 @@ class Set {
 	friend class SetIterator;
 
     private:
-		//TODO - Representation
+        //capacity
+        int cp;
+
+        //size (actual number of elements)
+        int n;
+
+        //elements
+        TElem* e;
+
+        //the resizing operation
+        void resize();
 
     public:
         //implicit constructor
+        Set(int);
+
+        //default constructor
         Set();
 
         //adds an element to the set
@@ -40,4 +53,6 @@ class Set {
         // destructor
         ~Set();
 
+        //AUXILIARY FUNCTION
+        void printSet();
 };
