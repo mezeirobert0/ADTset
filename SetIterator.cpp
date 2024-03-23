@@ -1,5 +1,6 @@
 #include "SetIterator.h"
 #include "Set.h"
+#include<stdexcept>
 
 
 SetIterator::SetIterator(const Set& m) : set(m)
@@ -14,11 +15,17 @@ void SetIterator::first() {
 
 
 void SetIterator::next() {
+	if (!valid())
+		throw std::out_of_range("Iterator is already out of range");
+
 	current++;
 }
 
 
 TElem SetIterator::getCurrent() {
+	if (!valid())
+		throw std::out_of_range("Iterator is already out of range");
+
 	return *current;
 }
 
@@ -26,6 +33,6 @@ bool SetIterator::valid() const {
 	return current - set.e < set.n;
 }
 
-void SetIterator::setCurrent(TElem value) {
-	*current = value;
+TElem* SetIterator::getPointerToCurrent() {
+	return current;
 }

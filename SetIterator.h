@@ -30,5 +30,5 @@ public:
 	bool valid() const;
 
 	//AUXILIARY FUNCTION
-	void setCurrent(TElem);
+	TElem* getPointerToCurrent();
 };

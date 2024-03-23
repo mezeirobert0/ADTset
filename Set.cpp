@@ -73,7 +73,10 @@ bool Set::remove(TElem elem) {
 	}
 
 	//moving the last element to the position where elem was found
-	it.setCurrent(*(e - n + 1));
+	// it.setCurrent(*(e - n + 1)); doesn't work
+
+	TElem* ptr = it.getPointerToCurrent();
+	*ptr = *(e + n - 1);
 
 	//Decremented the size
 	n--;
