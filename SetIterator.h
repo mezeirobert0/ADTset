@@ -3,7 +3,6 @@
 
 class SetIterator
 {
-	//DO NOT CHANGE THIS PART
 	friend class Set;
 
 private:
@@ -15,6 +14,9 @@ private:
 
 	//Pointer to the current element
 	TElem* current;
+
+	//AUXILIARY FUNCTION
+	TElem* getPointerToCurrent();
 
 public:
 	//Sets the iterator to the first element of the set
@@ -28,7 +30,4 @@ public:
 
 	//Returns whether the iterator is valid (it hasn't gone out of bounds)
 	bool valid() const;
-
-	//AUXILIARY FUNCTION
-	TElem* getPointerToCurrent();
 };

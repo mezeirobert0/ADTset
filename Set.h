@@ -1,13 +1,10 @@
 #pragma once
-//DO NOT INCLUDE SETITERATOR
 
-//DO NOT CHANGE THIS PART
 #define NULL_TELEM -111111
 typedef int TElem; //Generic data type - here it is int
 class SetIterator;
 
 class Set {
-	//DO NOT CHANGE THIS PART
 	friend class SetIterator;
 
     private:
@@ -52,7 +49,4 @@ class Set {
 
         // destructor
         ~Set();
-
-        //AUXILIARY FUNCTION
-        void printSet();
 };

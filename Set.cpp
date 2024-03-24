@@ -114,18 +114,6 @@ Set::~Set() {
 	delete[] e;
 }
 
-void Set::printSet() {
-	SetIterator it = iterator();
-
-	while (it.valid()) {
-		std::cout << it.getCurrent() << ' ';
-
-		it.next();
-	}
-	
-	std::cout << '\n';
-}
-
 
 SetIterator Set::iterator() const {
 	return SetIterator(*this);
