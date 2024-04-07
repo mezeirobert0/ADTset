@@ -2,18 +2,6 @@
 #include "SetITerator.h"
 #include <iostream>
 
-
-Set::Set(int cp) {
-	//Initializing capacity
-	this->cp = cp;
-	
-	//Allocating space dynamically for cp elements of type TElem
-	e = new TElem[cp];
-
-	//Initializing size
-	n = 0;
-}
-
 Set::Set() {
 	//Initializing capacity
 	cp = 1;

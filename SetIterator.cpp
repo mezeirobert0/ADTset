@@ -1,6 +1,6 @@
 #include "SetIterator.h"
 #include "Set.h"
-#include<stdexcept>
+#include <stdexcept>
 
 
 SetIterator::SetIterator(const Set& m) : set(m)
